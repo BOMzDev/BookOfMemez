@@ -1,0 +1,17 @@
+syntax = "proto3";
+package bookofmemez.bookofmemez;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "bookofmemez/bookofmemez/params.proto";
+
+option go_package = "BookOfMemez/x/bookofmemez/types";
+
+// GenesisState defines the bookofmemez module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}

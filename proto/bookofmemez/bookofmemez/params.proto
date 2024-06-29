@@ -1,0 +1,15 @@
+syntax = "proto3";
+package bookofmemez.bookofmemez;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "BookOfMemez/x/bookofmemez/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "bookofmemez/x/bookofmemez/Params";
+  option (gogoproto.equal) = true;
+
+  
+}
